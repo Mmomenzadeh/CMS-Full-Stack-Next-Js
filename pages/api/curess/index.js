@@ -48,7 +48,8 @@ export default async function curess(req, res) {
       }
       break;
     default:
-      console.log(" here is => default");
+      res.json({ "message => ": "here is default" });
+
       break;
   }
 }

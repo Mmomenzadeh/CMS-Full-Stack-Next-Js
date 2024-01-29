@@ -28,7 +28,8 @@ const teacherHandler = async (req, res) => {
       }
       break;
     default:
-      console.log("you are at default");
+      res.json({ "message => ": "here is default" });
+
       break;
   }
 };

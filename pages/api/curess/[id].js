@@ -8,6 +8,15 @@ const handler = async (req, res) => {
   const { id } = req.query;
   const { title, time } = req.body;
   switch (req.method) {
+    case "GET":
+      try {
+        const singleCuress = await model.findOne({ _id: id });
+        res.status(200).json(singleCuress);
+      } catch (error) {
+        res.status(500).json("internal server error");
+      }
+
+      break;
     case "DELETE":
       if (isValidObjectId(id)) {
         try {
@@ -39,7 +48,7 @@ const handler = async (req, res) => {
       break;
 
     default:
-      console.log("default");
+      res.json({ "message => ": "here is default" });
       break;
   }
 };
