@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 // import model from "./curess";
 const model = require("./curess")
 
-const commentsSchema = new mongoose.Schema(
+export const commentsSchema = new mongoose.Schema(
   {
     body: {
       type: String,

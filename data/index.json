@@ -1,16 +1,25 @@
 {
-  "_id": "65b7989a94bad83dfd556912",
-  "title": "my sql",
-  "time": "45",
-  "price": 500000,
-  "teacher": {
-    "name": "jonh smith",
-    "_id": "65b78afbbb48cddae587903c",
-    "createdAt": "2024-01-29T11:24:43.626Z",
-    "updatedAt": "2024-01-29T12:22:50.468Z",
-    "__v": 0
-  },
-  "createdAt": "2024-01-29T12:22:50.469Z",
-  "updatedAt": "2024-01-29T12:22:50.469Z",
-  "__v": 0
+  "_id": "65b76119fd537f0422ee3121",
+  "title": "react js and next js",
+  "time": "50",
+  "price": 1000000,
+  "createdAt": "2024-01-29T08:26:01.724Z",
+  "updatedAt": "2024-01-29T08:26:01.724Z",
+  "__v": 0,
+  "comments": [
+    {
+      "_id": "65b79d3e94bad83dfd556916",
+      "body": "is wonderfull curess",
+      "curess": "65b76119fd537f0422ee3121",
+      "__v": 0
+    },
+    {
+      "_id": "65b7af2c9c216b0ca871a4c1",
+      "body": "wel done ! very good",
+      "curess": "65b76119fd537f0422ee3121",
+      "createdAt": "2024-01-29T13:59:08.316Z",
+      "updatedAt": "2024-01-29T13:59:08.316Z",
+      "__v": 0
+    }
+  ]
 }

@@ -2,6 +2,8 @@ const Mongoose = require("mongoose");
 const Schema = Mongoose.Schema;
 import teachersModel from "./teachers";
 import { teachersSchems } from "./teachers";
+import { commentsSchema } from "./comments";
+import commentsModel from "./comments";
 
 const schema = new Schema(
   {
@@ -44,6 +46,12 @@ const schema = new Schema(
     timestamps: true,
   }
 );
+
+schema.virtual("comments", {
+  ref: "comment",
+  localField: "_id",
+  foreignField: "curess",
+});
 
 const model = Mongoose.models?.curess || Mongoose.model("curess", schema);
 

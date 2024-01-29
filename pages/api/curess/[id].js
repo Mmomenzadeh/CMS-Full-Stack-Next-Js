@@ -1,4 +1,5 @@
 import model from "@/model/curess";
+import commentsModel from "@/model/comments";
 import conectToDB from "@/utils/conectToDb";
 
 import { isValidObjectId } from "mongoose";
@@ -10,10 +11,14 @@ const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
       try {
-        const singleCuress = await model.findOne({ _id: id });
+        const singleCuress = await model
+          .findOne({ _id: id })
+          .populate("comments")
+          .lean();
         res.status(200).json(singleCuress);
       } catch (error) {
-        res.status(500).json("internal server error");
+        console.log(error)
+        res.status(500).json("internal server error", { err: error });
       }
 
       break;
